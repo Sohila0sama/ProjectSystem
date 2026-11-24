@@ -1,0 +1,59 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+}
+
+.register-header { margin-bottom: 24px; }
+.register-header h1 { margin: 6px 0 4px; font-size: 1.6rem; }
+.register-header p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+.brand {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.rules {
+  list-style: none;
+  margin: -6px 0 16px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 10px;
+  font-size: 0.82rem;
+  display: grid;
+  gap: 4px;
+}
+.rule { color: var(--text-muted); }
+.rule--met { color: var(--success); font-weight: 600; }
+
+.login-hint { text-align: center; margin: 18px 0 0; color: var(--text-muted); font-size: 0.9rem; }
+.login-hint a { color: var(--primary); font-weight: 600; }
+.login-hint a:hover { text-decoration: underline; }
+
+.success-card { text-align: center; }
+.success-card h1 { margin: 12px 0 8px; }
+.success-card p { color: var(--text-muted); margin-bottom: 20px; }
+.success-icon {
+  width: 64px; height: 64px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #dcfce7; color: var(--success);
+  font-size: 2rem; font-weight: 700;
+}
+.link-btn { text-decoration: none; }
+
+@media (max-width: 480px) {
+  .register-card { padding: 24px 18px; }
+}
