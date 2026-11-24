@@ -1,0 +1,170 @@
+/* src/pages/Register.css */
+:root {
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #cbd5e1;
+  --error: #dc2626;
+  --error-bg: #fef2f2;
+  --success: #16a34a;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.register-header { margin-bottom: 24px; }
+.register-header h1 { margin: 6px 0 4px; font-size: 1.6rem; }
+.register-header p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.brand {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.field { margin-bottom: 16px; }
+.field label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.9rem; }
+
+.input-wrap { position: relative; }
+
+.input-wrap input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Leave room for the eye button on password fields */
+.input-wrap:has(.toggle-btn) input { padding-right: 46px; }
+
+.input-wrap input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18);
+}
+
+.field--invalid .input-wrap input {
+  border-color: var(--error);
+}
+.field--invalid .input-wrap input:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.18);
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.toggle-btn:hover { color: var(--text); background: #f1f5f9; }
+.toggle-btn:focus-visible { outline: 2px solid var(--primary); }
+
+.error-msg {
+  margin: 6px 0 0;
+  color: var(--error);
+  font-size: 0.85rem;
+}
+
+.alert-error {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  background: var(--error-bg);
+  border: 1px solid #fecaca;
+  color: var(--error);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.rules {
+  list-style: none;
+  margin: -6px 0 16px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  display: grid;
+  gap: 4px;
+}
+.rule { color: var(--muted); }
+.rule--met { color: var(--success); font-weight: 600; }
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.submit-btn:hover:not(:disabled) { background: var(--primary-dark); }
+.submit-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+.submit-btn:focus-visible { outline: 3px solid rgba(15, 118, 110, 0.4); outline-offset: 2px; }
+
+.login-hint { text-align: center; margin: 18px 0 0; color: var(--muted); font-size: 0.9rem; }
+.login-hint a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.login-hint a:hover { text-decoration: underline; }
+
+.success-card { text-align: center; }
+.success-card h1 { margin: 12px 0 8px; }
+.success-card p { color: var(--muted); margin-bottom: 20px; }
+.success-icon {
+  width: 64px; height: 64px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #dcfce7; color: var(--success);
+  font-size: 2rem; font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .register-card { padding: 24px 18px; }
+}
