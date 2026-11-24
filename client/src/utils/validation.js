@@ -1,7 +1,6 @@
 export const UNIVERSITY_EMAIL_REGEX =
   /^[a-z0-9._%+-]+@([a-z0-9-]+\.)+(edu|ac)(\.[a-z]{2})?$/i;
 
-
 export const PASSWORD_RULES = [
   { id: "length", label: "At least 8 characters", test: (v) => v.length >= 8 },
   { id: "upper", label: "One uppercase letter (A-Z)", test: (v) => /[A-Z]/.test(v) },
@@ -49,6 +48,18 @@ export const validateConfirmPassword = (password, confirm) => {
   return "";
 };
 
+export const validateLoginPassword = (value) =>
+  value ? "" : "Password is required.";
+
+export const validateLoginForm = ({ email, password }) => {
+  const errors = {};
+  const emailError = validateEmail(email);
+  const passwordError = validateLoginPassword(password);
+
+  if (emailError) errors.email = emailError;
+  if (passwordError) errors.password = passwordError;
+  return errors;
+};
 
 export const validateRegisterForm = ({ name, email, password, confirmPassword }) => {
   const errors = {};
