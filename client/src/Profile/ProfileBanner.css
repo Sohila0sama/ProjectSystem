@@ -1,0 +1,21 @@
+.pc-page{min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:#e8efe9;font-family:"Trebuchet MS",system-ui,sans-serif;color:#17332a}
+.pc-card{width:100%;max-width:520px;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(23,51,42,.15)}
+.pc-banner{height:130px;background:linear-gradient(135deg,#0f5132,#2e8b57 55%,#f2b84b)}
+.pc-avatar{position:relative;display:grid;place-items:center;width:104px;height:104px;margin:-52px 0 0 32px;border-radius:50%;border:5px solid #fff;background:#0f5132;color:#fff;font-size:34px;font-weight:700;overflow:hidden;cursor:pointer}
+.pc-avatar img{width:100%;height:100%;object-fit:cover}
+.pc-avatar em{position:absolute;inset:auto 0 0;background:rgba(0,0,0,.55);font-size:12px;font-style:normal;text-align:center;padding:4px 0;opacity:0;transition:opacity .15s}
+.pc-avatar:hover em,.pc-avatar:focus-within em{opacity:1}
+.pc-body{padding:12px 32px 32px}
+.pc-body h1{margin:0 0 20px;font-size:26px;word-break:break-word}
+.pc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pc-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.pc-field label{font-size:13px;font-weight:700;color:#3d5a4e}
+.pc-field input{padding:12px 16px;border:2px solid #dfe8e2;border-radius:999px;font-size:16px;background:#f7faf8;color:inherit;min-width:0}
+.pc-field input:focus{outline:none;border-color:#2e8b57;background:#fff}
+.pc-field input[aria-invalid="true"]{border-color:#c62f3b}
+.pc-err{color:#c62f3b;font-size:13px;padding-left:8px}
+.pc-body button{width:100%;padding:14px;border:0;border-radius:999px;background:#0f5132;color:#fff;font-size:16px;font-weight:700;cursor:pointer;margin-top:4px}
+.pc-body button:hover:not(:disabled){background:#2e8b57}
+.pc-body button:disabled{background:#b9c9c0;cursor:not-allowed}
+.pc-ok{min-height:20px;margin:12px 0 0;text-align:center;color:#0f5132;font-weight:700;font-size:14px}
+@media(max-width:480px){.pc-row{grid-template-columns:1fr}.pc-body{padding:12px 20px 24px}.pc-avatar{margin-left:20px}}
