@@ -77,7 +77,7 @@ export default function Register() {
         <section className="register-card success-card">
           <div className="success-icon" aria-hidden="true">✓</div>
           <h1>Account created!</h1>
-          <p>Your UniTrade account is ready. You can now log in with your university email.</p>
+          <p>Your PICKIFY account is ready. You can now log in with your university email.</p>
           <Link className="submit-btn link-btn" to="/login">Go to login</Link>
         </section>
       </div>
@@ -90,7 +90,7 @@ export default function Register() {
     <div className="register-page">
       <section className="register-card">
         <header className="register-header">
-          <span className="brand">UniTrade</span>
+          <span className="brand">PICKIFY</span>
           <h1>Create your account</h1>
           <p>Student-only marketplace. Use your university email to join.</p>
         </header>

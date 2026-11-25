@@ -25,7 +25,7 @@
 .input-wrap input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+  box-shadow: 0 0 0 3px rgba(74, 107, 47, 0.25);
 }
 
 .field--invalid .input-wrap input { border-color: var(--error); }
@@ -79,4 +79,4 @@
 }
 .submit-btn:hover:not(:disabled) { background: var(--primary-dark); }
 .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; }
-.submit-btn:focus-visible { outline: 3px solid rgba(79, 70, 229, 0.4); outline-offset: 2px; }
+.submit-btn:focus-visible { outline: 3px solid rgba(74, 107, 47, 0.45); outline-offset: 2px; }
