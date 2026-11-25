@@ -74,3 +74,26 @@ export const validateRegisterForm = ({ name, email, password, confirmPassword })
   if (confirmError) errors.confirmPassword = confirmError;
   return errors;
 };
+export const validatePhone = (value) => {
+  const v = value.trim();
+  if (!v) return "Phone number is required.";
+  if (!/^01[0125]\d{8}$/.test(v)) {
+    return "Enter an Egyptian mobile number, e.g. 01012345678.";
+  }
+  return "";
+};
+
+export const validateFaculty = (value) =>
+  value.trim() ? "" : "Faculty is required.";
+
+export const validateProfileForm = ({ name, phone, faculty }) => {
+  const errors = {};
+  const nameError = validateName(name);
+  const phoneError = validatePhone(phone);
+  const facultyError = validateFaculty(faculty);
+
+  if (nameError) errors.name = nameError;
+  if (phoneError) errors.phone = phoneError;
+  if (facultyError) errors.faculty = facultyError;
+  return errors;
+};
