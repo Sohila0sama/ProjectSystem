@@ -82,7 +82,7 @@ export default function Login() {
     <div className="register-page">
       <section className="register-card">
         <header className="register-header">
-          <span className="brand">UniTrade</span>
+          <span className="brand">PICKIFY</span>
           <h1>Log in</h1>
           <p>Welcome back! Enter your university email and password.</p>
         </header>
@@ -122,7 +122,7 @@ export default function Login() {
           </button>
 
           <p className="login-hint">
-            New to UniTrade? <Link to="/register">Create an account</Link>
+            New to PICKIFY? <Link to="/register">Create an account</Link>
           </p>
         </form>
       </section>

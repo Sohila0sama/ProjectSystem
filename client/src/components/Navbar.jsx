@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -6,7 +7,8 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar__inner">
         <Link to="/" className="navbar__logo">
-          Uni<span>Trade</span>
+          <img src={logo} alt="Pickify logo" />
+          <span>Pickify</span>
         </Link>
 
         <nav className="navbar__links">
