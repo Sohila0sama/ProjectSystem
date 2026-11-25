@@ -11,14 +11,12 @@ export default function Navbar() {
           <span>Pickify</span>
         </Link>
 
-        <nav className="navbar__links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register" className="navbar__btn">
-            Register
-          </NavLink>
-          <NavLink to="/profile">Profile</NavLink>
-        </nav>
+       <nav className="navbar__links">
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
+      </nav>
       </div>
     </header>
   );
